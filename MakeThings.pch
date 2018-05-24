@@ -1,0 +1,29 @@
+//
+// MakeThings.pch
+// MakeThings_test
+//
+//  Created by mac on 2017/6/13.
+//  Copyright © 2017年 mac. All rights reserved.
+//
+
+#ifndef MakeThings_pch
+#define MakeThings_pch
+
+#import <Availability.h>
+
+
+#import "CocoaLumberjack.h"
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
+
+/*    BLOCK使用Weak/Strong的对象引用    */
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define SS(strongSelf,weakSelf) __strong __typeof(weakSelf)strongSelf = weakSelf;
+
+/*    masonry    */
+#define MAS_SHORTHAND
+#import "Masonry.h"
+#import "GlobeBussinessDefine.h"
+#import "YYHud.h"
+
+
+#endif /* MOLPoints_pch */

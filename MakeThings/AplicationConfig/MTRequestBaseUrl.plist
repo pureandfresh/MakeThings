@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>version_string</key>
+	<string>rest/v1/</string>
+	<key>test_environment</key>
+	<string>http://118.31.23.235:8105/aiwen_rest/</string>
+</dict>
+</plist>
