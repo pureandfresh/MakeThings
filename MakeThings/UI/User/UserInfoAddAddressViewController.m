@@ -13,7 +13,7 @@
 
 @interface UserInfoAddAddressViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic) NSArray *dataArray;
 @end
 
 @implementation UserInfoAddAddressViewController
@@ -21,10 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-
-- (void)didReceiveMemoryWarning {
+ - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (void)setupUI{
+    
+}
+
+- (void)prepareData{
+    
+}
+
 
 #pragma mark - <UITableViewDelegate,UITableViewDataSource>
 

@@ -24,6 +24,7 @@
 #define UserQRCodePreviewViewControllerID @"UserQRCodePreviewViewController"
 #define UserGenderViewControllerID @"UserGenderViewController"
 #define UserGenderViewControllerNavi @"UserGenderViewControllerNavi"
+#define UserInfoAddAddressViewControllerID @"UserInfoAddAddressViewController"
 #define MainStoryboard @"Main"
 #define UserStoryboard @"User"
 

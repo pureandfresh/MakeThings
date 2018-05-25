@@ -14,6 +14,7 @@
 #import "UserChangeInfoViewController.h"
 #import "UserQRCodePreviewViewController.h"
 #import "UserGenderViewController.h"
+#import "UserInfoAddAddressViewController.h"
 
 static CGFloat kHeightForRow = 60;
 static CGFloat kHeightForPortraitRow  = 80;
@@ -118,6 +119,27 @@ static NSString *UserInfoPortraitCellID = @"UserInfoPortraitCell";
             UINavigationController *navi = [storyboard instantiateViewControllerWithIdentifier:UserGenderViewControllerNavi];
             [self presentViewController:navi animated:YES completion:nil];
         }
+            break;
+
+        case UserInfoRowTypeRegion:{
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:UserStoryboard bundle:nil];
+            UINavigationController *navi = [storyboard instantiateViewControllerWithIdentifier:UserGenderViewControllerNavi];
+            [self presentViewController:navi animated:YES completion:nil];
+        }
+            break;
+        case UserInfoRowTypeSign:{
+        }
+            break;
+
+        case UserInfoRowTypeAddress:{
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:UserStoryboard bundle:nil];
+            UserInfoAddAddressViewController *vc = [storyboard instantiateViewControllerWithIdentifier:UserInfoAddAddressViewControllerID];
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }
+            break;
+            
 
 
         default:

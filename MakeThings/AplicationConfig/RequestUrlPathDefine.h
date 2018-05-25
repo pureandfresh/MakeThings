@@ -14,5 +14,6 @@
 #define LoginPath      @"loginPath"
 
 #define userStatisticsPath  @"userStatistics"
+#define AddNewAddress  @"AddNewAddress"
 
 #endif /* RequestUrlPathDefine_h */

@@ -496,7 +496,7 @@
         <!--User Info Add Address View Controller-->
         <scene sceneID="Osy-x5-x7s">
             <objects>
-                <viewController id="Pgk-rR-R6e" customClass="UserInfoAddAddressViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoAddAddressViewController" id="Pgk-rR-R6e" customClass="UserInfoAddAddressViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mMP-hi-GGe"/>
                         <viewControllerLayoutGuide type="bottom" id="Ypn-AK-3Vg"/>
