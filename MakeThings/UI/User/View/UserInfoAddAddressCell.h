@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UserInfoAddAddressCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *addImageView;
+@property (weak, nonatomic) IBOutlet UILabel *addAddressLabel;
 
 @end

@@ -20,15 +20,25 @@
     
     NSDictionary *parameter = @{@"id":userId};
     
-    [self POST:[MTUrlRequestHander urlStringWithBussniessName:userStatisticsPath] parameters:parameter success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+    [self postWithUrlString:[MTUrlRequestHander urlStringWithBussniessName:userStatisticsPath] parameters:parameter successBlock:^(NSDictionary *responseDic) {
         if (success) {
-            success(responseData);
+            success(responseDic);
         }
-    } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
+    } failedBlock:^(NSString *errorString) {
         if (failed) {
             failed(errorString);
         }
     }];
+    
+//    [self POST:[MTUrlRequestHander urlStringWithBussniessName:userStatisticsPath] parameters:parameter success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+//        if (success) {
+//            success(responseData);
+//        }
+//    } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
+//        if (failed) {
+//            failed(errorString);
+//        }
+//    }];
 }
 
 - (void)requestUserAddressListWithContact:(NSString *)contactName
@@ -46,10 +56,14 @@
                                   @"isDefault":isDefault,
                                   @"id":userID
                                   };
-    [self POST:[MTUrlRequestHander urlStringWithBussniessName:AddNewAddress] parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
-        
+    [self POST:[MTUrlRequestHander urlStringWithBussniessName:ObtainAllAddress] parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+        if (success) {
+            success(responseData);
+        }
     } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
-        
+        if (failed) {
+            failed(errorString);
+        }
     }];
 }
 
@@ -95,6 +109,77 @@
                                  @"isDefault":isDefault
                                  };
     [self POST: [MTUrlRequestHander urlStringWithBussniessName:AddNewAddress]parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+        if (success) {
+            success(responseData);
+        }
+    } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
+        if (failed) {
+            failed(errorString);
+        }
+    }];
+}
+
+- (void)userChangeInfoWithHeadImgUrl:(NSString *)headImgUrl
+                                name:(NSString *)name
+                              gender:(NSString *)gender
+                             address:(NSString *)address
+                           signature:(NSString *)signature
+                                 age:(NSString *)age
+                              idcard:(NSString *)idcard
+                        successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed{
+    NSDictionary *parameters = @{@"headImgUrl":headImgUrl,
+                                 @"name":name,
+                                 @"gender":gender,
+                                 @"address":address,
+                                 @"signature":signature,
+                                 @"age":age,
+                                 @"idcard":idcard
+                                 };
+    [self POST:[MTUrlRequestHander urlStringWithBussniessName:AddNewAddress] parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+        if (success) {
+            success(responseData);
+        }
+    } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
+        if (failed) {
+            failed(errorString);
+        }
+    }];
+}
+
+- (void)userForgetPasswordWithPhoneNumber:(NSString *)phoneNumber
+                                 password:(NSString *)password
+                                     code:(NSString *)code
+                             successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed{
+    NSDictionary *parameters = @{
+                                 @"phone":phoneNumber,
+                                 @"password":password,
+                                 @"code":code
+                          };
+    
+    [self POST:[MTUrlRequestHander urlStringWithBussniessName:AddNewAddress] parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
+        if (success) {
+            success(responseData);
+        }
+    } failure:^(NSString *errorString, id<ResponseInfoProtocol> responseInfo) {
+        if (failed) {
+            failed(errorString);
+        }
+    }];
+    
+}
+
+
+- (void)userChangePasswordWithPhoneNumber:(NSString *)phoneNumber
+                                password:(NSString *)password
+                             oldPassword:(NSString *)oldPassword
+                            successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed{
+    NSDictionary *parameters = @{
+                                 @"phone":phoneNumber,
+                                 @"password":password,
+                                 @"oldPassword":oldPassword
+                                 };
+    
+    [self POST:[MTUrlRequestHander urlStringWithBussniessName:AddNewAddress] parameters:parameters success:^(id responseData, id<ResponseInfoProtocol> responseInfo) {
         if (success) {
             success(responseData);
         }

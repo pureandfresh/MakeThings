@@ -33,7 +33,10 @@
 #define UserPortraitCellID @"UserPortraitCell"
 #define UserCommonCellID  @"UserCommonCell"
 #define UserInfoCheckGenderCellID @"UserInfoCheckGenderCell"
-
+#define UserInfoAddressCellID @"UserInfoAddressCell"
+#define UserInfoAddAddressCellID @"UserInfoAddAddressCell"
+#define UserInfoEditAddressViewControllerID  @"UserInfoEditAddressViewController"
+#define UserInfoEditAddressViewControllerNavi  @"UserInfoEditAddressViewControllerNavi"
 
 /**********************/
 /*   */

@@ -84,20 +84,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@2x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@3x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@2x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@3x.png"
+  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/JGProgressHUD/JGProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@2x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@3x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@2x.png"
-  install_resource "${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@3x.png"
+  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/JGProgressHUD/JGProgressHUD.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

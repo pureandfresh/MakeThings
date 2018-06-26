@@ -9,5 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "BaseNetworkService.h"
 
+@protocol BaseRequestAPIDelegate <NSObject>
+
+- (void)userSessionExpired;
+
+
+@end
+
+
 @interface BaseRequestAPI : BaseNetworkService
+@property (nonatomic,assign) id<BaseRequestAPIDelegate> delegate;
+
+/*   为了统一处理response中某个code对应的场景  */
+- (void)postWithUrlString:(NSString *)urlString
+               parameters:(NSDictionary *)parameters
+             successBlock:(void(^)(NSDictionary *responseDic))success
+              failedBlock:(void(^)(NSString *errorString))failed;
 @end

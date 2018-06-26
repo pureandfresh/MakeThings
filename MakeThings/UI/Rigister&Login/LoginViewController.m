@@ -12,8 +12,9 @@
 #import "MTAplicationUser.h"
 #import "MainTabBarViewController.h"
 #import "UserViewController.h"
+#import "UIViewController+Extention.h"
 
-@interface LoginViewController ()<UITextFieldDelegate>
+@interface LoginViewController ()<UITextFieldDelegate,BaseRequestAPIDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextfield;
 @property (weak, nonatomic) IBOutlet UILabel *registerLabel;
@@ -50,7 +51,9 @@
 - (IBAction)loginButtonClicked:(id)sender {
     
     WS(weakSelf);
-    [[[AccountRelatedAPI alloc]init] userLoginWithPhoneNumber:self.mobileTextfield.text password:self.passwordTextfield.text successBlock:^(NSDictionary *responseDic) {
+    AccountRelatedAPI *api =  [[AccountRelatedAPI alloc]init];
+    api.delegate = self;
+    [api userLoginWithPhoneNumber:self.mobileTextfield.text password:self.passwordTextfield.text successBlock:^(NSDictionary *responseDic) {
         SS(strongSelf, weakSelf);
         NSString *status = [NSString stringWithFormat:@"%@",responseDic[@"status"]];
         if (status.integerValue == 0) {
@@ -82,6 +85,12 @@
     return YES;
 }
 
+
+#pragma mark - BaseRequestAPIDelegate
+
+- (void)userSessionExpired{
+    [LoginViewController presentToLoginViewControllerWithFromViewController:[self getCurrentViewController]];
+}
 
 +(void)pushToLoginViewControllerWithFromViewController:(UIViewController *)fromViewController{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:RegisterStoryboardName bundle:nil];

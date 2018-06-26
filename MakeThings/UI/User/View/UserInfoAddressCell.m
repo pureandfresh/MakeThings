@@ -7,18 +7,27 @@
 //
 
 #import "UserInfoAddressCell.h"
+#import "UserAddressModel.h"
 
 @implementation UserInfoAddressCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+}
+
+- (void)updateUserInfoAddressCellWithModel:(UserAddressModel *)model{
+    self.nameLabel.text = model.contactName;
+    self.addressLabel.text = [NSString stringWithFormat:@"%@%@",model.region,model.detailAddress];
+}
+- (IBAction)editButtonClicked:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(userInfoAddressCellDidClickedEditButton:)]) {
+        [self.delegate userInfoAddressCellDidClickedEditButton:self];
+    }
 }
 
 @end

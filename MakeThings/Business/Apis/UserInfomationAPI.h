@@ -46,6 +46,28 @@
 - (void)UserDeleteTheAddressWithID:(NSString *)id successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed;
 
 
+/*  用户修改个人信息   */
+- (void)userChangeInfoWithHeadImgUrl:(NSString *)headImgUrl
+                                name:(NSString *)name
+                              gender:(NSString *)gender
+                             address:(NSString *)address
+                           signature:(NSString *)signature
+                                 age:(NSString *)age
+                              idcard:(NSString *)idcard
+                        successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed;
+/*   忘记密码  */
+- (void)userForgetPasswordWithPhoneNumber:(NSString *)phoneNumber
+                                 password:(NSString *)password
+                                     code:(NSString *)code
+                             successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed;
+
+/*  修改密码  */
+- (void)userhangePasswordWithPhoneNumber:(NSString *)phoneNumber
+                                password:(NSString *)password
+                             oldPassword:(NSString *)oldPassword
+                            successBlock:(void(^)(NSDictionary *responseDic))success                            failedBlock:(void(^)(NSString *errorString))failed;
+
+
 
 
 

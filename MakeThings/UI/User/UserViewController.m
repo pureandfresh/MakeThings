@@ -72,11 +72,13 @@
     [data addObject:userModelThree];
     self.dataArray = [NSArray arrayWithArray:data];
     
-    
-    [[[UserInfomationAPI alloc]init] requestUserStatisticWithUserId:user.userID successBlock:^(NSDictionary *responseDic) {
+    UserInfomationAPI *api =  [[UserInfomationAPI alloc]init];
+    //api.delegate = self;
+
+    [api requestUserStatisticWithUserId:user.userID successBlock:^(NSDictionary *responseDic) {
         NSString *status = [NSString stringWithFormat:@"%@",responseDic[@"status"]];
         if (status.integerValue == -2) {
-            [LoginViewController presentToLoginViewControllerWithFromViewController:self];
+          //  [LoginViewController presentToLoginViewControllerWithFromViewController:self];
         }else if (status.integerValue == 0){
             UserDetailModel *userModelOne = self.dataArray.firstObject;
             [userModelOne updateUserDetailModelWithDictionary:responseDic[@"data"]];

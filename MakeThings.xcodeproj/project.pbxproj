@@ -36,6 +36,9 @@
 		B635D66820A58CFE006E3970 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B635D66720A58CFE006E3970 /* InitialViewController.m */; };
 		B635D66B20AAC87F006E3970 /* UserInfomationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B635D66A20AAC87F006E3970 /* UserInfomationAPI.m */; };
 		B635D66E20AAC8A3006E3970 /* UserInfomationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B635D66D20AAC8A3006E3970 /* UserInfomationProvider.m */; };
+		B6362E9220BBF4B400322A02 /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6362E9120BBF4B400322A02 /* UserAddressModel.m */; };
+		B6362E9520BD3D6300322A02 /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B6362E9420BD3D6300322A02 /* UIViewController+Extention.m */; };
+		B6362E9820BD5A4100322A02 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B6362E9720BD5A4100322A02 /* NSDate+Extention.m */; };
 		B63D0F441FDD2F5100E7E284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63D0F431FDD2F5100E7E284 /* AppDelegate.m */; };
 		B63D0F471FDD2F5100E7E284 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63D0F461FDD2F5100E7E284 /* ViewController.m */; };
 		B63D0F4A1FDD2F5200E7E284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63D0F481FDD2F5200E7E284 /* Main.storyboard */; };
@@ -156,6 +159,12 @@
 		B635D66A20AAC87F006E3970 /* UserInfomationAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfomationAPI.m; sourceTree = "<group>"; };
 		B635D66C20AAC8A3006E3970 /* UserInfomationProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfomationProvider.h; sourceTree = "<group>"; };
 		B635D66D20AAC8A3006E3970 /* UserInfomationProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfomationProvider.m; sourceTree = "<group>"; };
+		B6362E9020BBF4B400322A02 /* UserAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
+		B6362E9120BBF4B400322A02 /* UserAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAddressModel.m; sourceTree = "<group>"; };
+		B6362E9320BD3D6300322A02 /* UIViewController+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extention.h"; sourceTree = "<group>"; };
+		B6362E9420BD3D6300322A02 /* UIViewController+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extention.m"; sourceTree = "<group>"; };
+		B6362E9620BD5A4100322A02 /* NSDate+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
+		B6362E9720BD5A4100322A02 /* NSDate+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extention.m"; sourceTree = "<group>"; };
 		B63D0F3F1FDD2F5100E7E284 /* MakeThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63D0F421FDD2F5100E7E284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B63D0F431FDD2F5100E7E284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -476,6 +485,8 @@
 				B635D66420A3EBD7006E3970 /* UserDetailModel.m */,
 				B674CE7420B29C0B00FDC179 /* UserInfoDetailModel.h */,
 				B674CE7520B29C0B00FDC179 /* UserInfoDetailModel.m */,
+				B6362E9020BBF4B400322A02 /* UserAddressModel.h */,
+				B6362E9120BBF4B400322A02 /* UserAddressModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -547,6 +558,10 @@
 			children = (
 				B674CE7C20B420D600FDC179 /* UIImage+Extension.h */,
 				B674CE7B20B420D600FDC179 /* UIImage+Extension.m */,
+				B6362E9320BD3D6300322A02 /* UIViewController+Extention.h */,
+				B6362E9420BD3D6300322A02 /* UIViewController+Extention.m */,
+				B6362E9620BD5A4100322A02 /* NSDate+Extention.h */,
+				B6362E9720BD5A4100322A02 /* NSDate+Extention.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -849,12 +864,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MakeThings/Pods-MakeThings-resources.sh",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error.png",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@2x.png",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_error@3x.png",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success.png",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@2x.png",
-				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/Resources/jg_hud_success@3x.png",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/JGProgressHUD/JGProgressHUD.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -920,6 +931,7 @@
 				B62627BC1FDFCEDC0030DE2C /* ResponseInfo.m in Sources */,
 				B6DCF6491FE109E400EEEEAF /* MTBaseViewController.m in Sources */,
 				B6330B6F20A0543A00BD9F10 /* MTAplicationUser.m in Sources */,
+				B6362E9520BD3D6300322A02 /* UIViewController+Extention.m in Sources */,
 				B635D66B20AAC87F006E3970 /* UserInfomationAPI.m in Sources */,
 				B6DCF6371FE1058A00EEEEAF /* AplicationInfo.m in Sources */,
 				B6330B5D209EFEBD00BD9F10 /* BaseRequestAPI.m in Sources */,
@@ -952,6 +964,8 @@
 				B635D66820A58CFE006E3970 /* InitialViewController.m in Sources */,
 				B6330B6A209FF9B300BD9F10 /* MTUrlRequestHander.m in Sources */,
 				B63D0F441FDD2F5100E7E284 /* AppDelegate.m in Sources */,
+				B6362E9220BBF4B400322A02 /* UserAddressModel.m in Sources */,
+				B6362E9820BD5A4100322A02 /* NSDate+Extention.m in Sources */,
 				B674CE8320B5561000FDC179 /* UserQRCodePreviewViewController.m in Sources */,
 				B6DCF64F1FE10A9D00EEEEAF /* ExerciseViewController.m in Sources */,
 				B674CE7920B4114400FDC179 /* UserPortraitPreviewController.m in Sources */,

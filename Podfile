@@ -10,4 +10,6 @@ pod 'JSONModel'
 pod 'Masonry','~> 1.0.2'
 pod 'CocoaLumberjack'
 pod 'SDWebImage','~> 4.2.3'
+pod 'DateTools'
+
 end
